@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WeedScript</title>
+
+    <link href="web/css/bootstrap.min.css" rel="stylesheet">
+    <link href="web/css/freelancer.css" rel="stylesheet">
+    <link href="web/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="page-top" class="index">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">A language for kool kidz</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#elements">Elements</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#examples">Examples</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#github">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="web/img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">WeedScript</span>
+                        <hr class="star-light">
+                        <span class="skills">A<span class='in-progress'>[n in-progress]</span> Turing complete language</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class='script-element'>
+                  <p>WeedScript is a basic programming language based off of <a style="color:#4befcf;" href="http://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a> and interpreted in <a style="color:#4befcf;" href="http://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>.</p>
+                  <p>The java interpreter looks for a given ".ws" file, at least Java 1.6 is required.</p>
+                  <br/>
+                  <br/>
+                  <p>Following several well-known smoking "rules", WeedScript operates in the following manner:</p>
+                  <br/>
+                  <p>-The "sesh" begins with a circle of X people with value 0, the first person holds the bowl</p>
+                  <p>-The bowl can move (only to the left!) one index at a time.</p>
+                  <p>-People are able to perform actions on the bowl, which in turn can affect their values.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="elements">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Elements</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class='script-element col-lg-offset-2'>
+                  <div id='pass-element'>
+                    <h3>Pass</h3>
+                  </div>
+                  <div>
+                    <p>Move the bowl to person to the "left" of the current person.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='blaze-element'>
+                  <h3>Blaze</h3>
+                </div>
+                <div>
+                  <p>Add the current bowl value to the current person.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='pack-element'>
+                  <h3>Pack</h3>
+                </div>
+                <div>
+                  <p>Add 1 from the bowl (maximum 2<sup>31</sup>-1).</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='cherry-element'>
+                  <h3>Cherry</h3>
+                </div>
+                <div>
+                  <p>Subtract 1 from the bowl (cannot be negative).</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='chill-element'>
+                  <h3>Chill</h3>
+                </div>
+                <div>
+                  <p>Subtract 1 from the current person (cannot be negative).</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='story-element'>
+                  <h3>Story</h3>
+                </div>
+                <div>
+                  <p>Print out the current person's value.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='toke-element'>
+                  <h3>Toke</h3>
+                </div>
+                <div>
+                  <p>Sets the current person to the ASCII value of 1 char of user input.</p>
+                  <p>Input that extends past one character is ignored after the first character.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='sesh-element'>
+                  <h3>Sesh</h3>
+                </div>
+                <div>
+                  <p>Sets the current sesh to the first integer of user input.</p>
+                  <p>NOTE: This sets the value of all people and the bowl to 0, effectively wiping all existing data.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='ash-element'>
+                  <h3>Ash</h3>
+                </div>
+                <div>
+                  <p>Sets the bowl value to 0.</p>
+                  <p>This is shorthand for "inhale cherry exhale"</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='inhale-element'>
+                  <h3>Inhale</h3>
+                </div>
+                <div>
+                  <p>Begins a loop sequence.</p>
+                  <p>All commands between "inhale" and the following "exhale" are repeated</p>
+                  <p>until the bowl or current person's value is 0.</p>
+                  <p>NOTE: Nested loops are in progress and do not currently work</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class='script-element col-lg-offset-2'>
+                <div id='exhale-element'>
+                  <h3>Exhale</h3>
+                </div>
+                <div>
+                  <p>Checks loop end conditions.</p>
+                  <p>This checks if the bowl or current person's value is 0,</p>
+                  <p>and if so it terminates the loop, otherwise the loop continues.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="success" id="examples">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Examples</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>User Operation</h3>
+                    <p>-The user begins with interpreter.java and the .ws file in the same directory</p>
+                    <p>-First, they compile interpreter.java with the command "javac interpreter.java"</p>
+                    <p>-Following successful compilation, they run the interpreter on the file with the command "java interpreter [filename].ws"</p>
+                    <br/>
+                    <p>NOTE: In the future, this will be streamlined and automated</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Basic WeedScript</h3>
+                    <p>File contents:</p>
+                    <p>pack pack pack pack inhale blaze cherry exhale story</p>
+                    <br/>
+                    <p>Operation begins with four "pack" commands, increasing the bowl value to 4</p>
+                    <p>The next command begins a loop, and the interpreter looks for the next instance of "exhale"</p>
+                    <p>All commands within "inhale" and "exhale" are stored, in this case "blaze cherry"</p>
+                    <p>When the loop terminates, the current person will be 4 and the bowl value will be 0</p>
+                    <p>Finally, the program will output the character with ASCII value 4 (EOT character) and terminate</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Advanced Weeding</h3>
+                    <p>File contents:</p>
+                    <p>sesh pack pack pack pack pack pack pack</p>
+                    <p>pack pack pack inhale blaze cherry exhale</p>
+                    <p>chill chill chill story chill chill story</p>
+                    <p>chill chill story</p>
+                    <br/>
+                    <p>Operation begins with a "sesh" initializer, where the user must input any positive integer.</p>
+                    <p>NOTE: Input value must be less than 2<sup>31</sup>-1.</p>
+                    <p>The code then packs the bowl ten times, and begins a loop. The loop contains two commands,</p>
+                    <p>"blaze cherry", which add the current bowl value to the current person and decrement it by 1,</p>
+                    <p>which results in the current person value being 55 when the loop terminates. The current person</p>
+                    <p>value is then decremented by 3 with the "chill" commands, and its value (52) is printed,</p>
+                    <p>resulting in a "4". The bowl value is then decremented twice and printed two more times,</p>
+                    <p>finally ending with a complete program output of "420".</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Lazy Weeding</h3>
+                    <p>File contents:</p>
+                    <p>toke story toke story toke story</p>
+                    <br/>
+                    <p>The user is prompted for three inputs, where they pass in 52, 50, and 48 in that order.</p>
+                    <p>The program outputs "420"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="github">
+        <div class="container">
+            <div class="row">
+              <a href='https://github.com/ChrisGermano/WeedScript'>
+                <div class="col-lg-12 text-center">
+                    <h2>GitHub</h2>
+                    <hr class="star-primary">
+                </div>
+              </a>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p style='text-align:center;'>Check out the code, offer improvements, get learned.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-12">
+                        <h3>Don't bogart this page, pass it around!</h3>
+                        <!--
+                        <ul class="list-inline">
+                            <li>
+                              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Chris Germano 2014
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="web/js/jquery.js"></script>
+    <script src="web/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="web/js/classie.js"></script>
+    <script src="web/js/cbpAnimatedHeader.js"></script>
+    <script src="web/js/freelancer.js"></script>
+</body>
+</html>
